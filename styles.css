@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #2a2a2a;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #ff3366;
+}
+
+.nav-links a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ff3366;
+}
+
+.nav-right {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.icon-link {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.icon-link:hover {
+    color: #ff3366;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-container {
+        padding: 0 20px;
+    }
+}
+/* Hero Section Styles */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('https://cdn.pixabay.com/photo/2023/11/15/16/23/hydrangea-8390432_1280.jpg') center/cover fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px; /* Adjust based on navbar height */
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.hero-button {
+    padding: 15px 40px;
+    background-color: #ff3366;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-button:hover {
+    background-color: #ff1a4d;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+/* Book Section Styles */
+.book-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.book-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 30px;
+}
+
+.book-image-container {
+    flex: 0 0 45%;
+    position: relative;
+    padding-left: 60px;
+}
+
+.book-cover {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.book-cover:hover {
+    transform: scale(1.03);
+}
+
+.book-content {
+    flex: 1;
+    padding-right: 60px;
+}
+
+.book-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.book-title:hover {
+    font-family: 'Dancing Script', cursive;
+    color: #ff3366;
+}
+
+.book-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.buy-button {
+    padding: 15px 50px;
+    background-color: #2a2a2a;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.buy-button:hover {
+    background-color: #ff3366;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .book-container {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .book-image-container {
+        padding-left: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .book-content {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .book-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* About Section Styles */
+.about-section {
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)),
+                url('https://cdn.pixabay.com/photo/2023/04/21/00/43/flowers-7940859_1280.jpg') center/cover fixed;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 30px;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.about-image-container {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+.poet-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    transform: rotate(-2deg);
+    transition: all 0.5s ease;
+}
+
+.poet-image:hover {
+    transform: rotate(1deg) scale(1.02);
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: #2a2a2a;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.about-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.about-quote {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #ff3366;
+    margin-bottom: 40px;
+    padding-left: 30px;
+    border-left: 3px solid #ff3366;
+}
+
+.about-button {
+    padding: 15px 45px;
+    background-color: #ff3366;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: #2a2a2a;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        height: auto;
+        padding: 60px 0;
+        background-attachment: scroll;
+    }
+
+    .about-container {
+        flex-direction: column-reverse;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .about-content {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .about-title {
+        font-size: 2.8rem;
+    }
+
+    .about-quote {
+        font-size: 1.4rem;
+        padding-left: 15px;
+    }
+
+    .poet-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+    background: #ffffff;
+    border-top: 1px solid #e5e5e5;
+}
+
+.newsletter-section {
+    padding: 60px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.newsletter-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-container h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.newsletter-container p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    padding: 12px 20px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.newsletter-form button {
+    padding: 12px 30px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: #ff3366;
+}
+
+.footer-main {
+    padding: 60px 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 0 30px;
+}
+
+.footer-column h4 {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.footer-column a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ff3366;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    font-size: 18px;
+    color: #333;
+}
+
+.social-links a:hover {
+    color: #ff3366;
+}
+
+.copyright {
+    padding: 25px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.copyright-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 12px;
+    color: #666;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.legal-links a {
+    color: #666;
+    text-decoration: none;
+}
+
+.legal-links a:hover {
+    color: #ff3366;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .copyright-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        max-width: 300px;
+    }
+}
