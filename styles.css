@@ -376,7 +376,21 @@ body {
         margin: 0 auto;
     }
 }
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: #2a2a2a;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+    transition: all 0.4s ease;
+    cursor: default;
+}
 
+.about-title:hover {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff3366;
+    letter-spacing: 2px;
+}
 
 
 
