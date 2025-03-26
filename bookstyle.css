@@ -1,0 +1,147 @@
+/* Book Hero Section */
+.book-hero {
+    padding: 120px 0 80px;
+    background: #fff;
+}
+
+.book-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 30px;
+}
+
+.book-hero-content {
+    flex: 1;
+}
+
+.book-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #2a2a2a;
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+
+.description-container {
+    margin-bottom: 40px;
+}
+
+.book-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.full-description {
+    display: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.book-description.expanded .full-description {
+    display: inline;
+    opacity: 1;
+}
+
+.read-more {
+    background: none;
+    border: none;
+    color: #ff3366;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    letter-spacing: 0.5px;
+}
+
+.buy-button {
+    position: relative;
+    display: inline-block;
+    padding: 18px 50px;
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.button-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.buy-button:hover .button-hover {
+    width: 150px;
+    height: 150px;
+}
+
+.buy-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255,51,102,0.3);
+}
+
+.book-hero-image {
+    flex: 0 0 45%;
+}
+
+.book-hero-image img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .book-hero-container {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .book-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .book-hero-image {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+.book-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #2a2a2a;
+    margin-bottom: 40px;
+    line-height: 1.1;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+}
+
+.book-hero-content h1:hover {
+    font-family: 'Dancing Script', cursive;
+    color: #ff3366;
+    letter-spacing: 1px;
+}
